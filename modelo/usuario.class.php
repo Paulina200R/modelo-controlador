@@ -200,6 +200,8 @@ class usuario extends conexion
                 $respuesta["result"] = array(
                     "idusuario" => $this->idusuario
                 );
+                header("Location: ../../../camilo/vista/plantilla/indexupdate.php");//Si el proceso se cumple se redirecciona al usuario.
+                exit();
                 return $respuesta; //Se duelve la respuesta.
             } else {
                 return $_respuestas->error_500(); //Se devuelve el error correspondiente.
@@ -251,7 +253,9 @@ class usuario extends conexion
                         $respuesta["result"] = array(
                             "idusuario" => $this->idusuario
                         );
-                        return $respuesta; 
+                        header("Location: ../../../camilo/vista/plantilla/indexdelete.php");//Si el proceso se cumple se redirecciona al usuario.
+                        exit();
+                        return $respuesta;  //Se duelve la respuesta.
                     }else{
                         return $_respuestas->error_500(); //Si resp es falso se devuelve el error.
                     }
@@ -298,6 +302,8 @@ class usuario extends conexion
                 $respuesta["result"] = array(
                     "idusuario" => $this->idusuario
                 );
+                header("Location: ../../../camilo/vista/plantilla/indexdefdelete.php");//Si el proceso se cumple se redirecciona al usuario.
+                exit();
                 return $respuesta; //Se duelve la respuesta.
             } else {
                 return $_respuestas->error_500(); //Se devuelve el error correspondiente.
